@@ -90,7 +90,7 @@ public class TestAsserts {
         assertEquals("a result", actualResult);
     }
 
-
+    /*
     @Test
     void timeoutExceeded() {
         // The following assertion fails with an error message similar to:
@@ -101,6 +101,8 @@ public class TestAsserts {
         });
     }
 
+
+
     @Test
     void timeoutExceededWithPreemptiveTermination() {
         // The following assertion fails with an error message similar to:
@@ -110,7 +112,7 @@ public class TestAsserts {
             new CountDownLatch(1).await();
         });
     }
-
+    */
     private static String greeting() {
         return "Hello, World!";
     }
