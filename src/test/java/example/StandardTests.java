@@ -14,10 +14,12 @@ class StandardTests {
 
     @BeforeAll
     static void initAll() {
+        System.out.println("@BeforeAll");
     }
 
     @BeforeEach
     void init() {
+        System.out.println("@BeforeEach");
     }
 
     @Test
@@ -45,10 +47,12 @@ class StandardTests {
 
     @AfterEach
     void tearDown() {
+        System.out.println("@AfterEach");
     }
 
     @AfterAll
     static void tearDownAll() {
+        System.out.println("@AfterAll");
     }
 
 }

@@ -2,6 +2,20 @@ package example;
 
 public class Calculator {
 
+    private int memory;
+
+    public Calculator(){
+        this.memory = 0;
+    }
+
+    public void inc (int i){
+        this.memory += i;
+    }
+
+    public int getMemory(){
+        return this.memory;
+    }
+
     public int add(int first, int second) {
         return first+ second;
     }

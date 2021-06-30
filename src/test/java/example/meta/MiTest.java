@@ -17,7 +17,11 @@ public class MiTest {
             "1, 100, 101"
     })
     void add(int first, int second, int expectedResult) {
+        System.out.println("first: "+first);
+        System.out.println("second: "+second);
+        System.out.println("expectedResult: "+expectedResult);
         Calculator calculator = new Calculator();
-        assertEquals(2, calculator.add(1, 1));
+        int resultado= calculator.add(first, second);
+        assertEquals(expectedResult, resultado);
     }
 }
