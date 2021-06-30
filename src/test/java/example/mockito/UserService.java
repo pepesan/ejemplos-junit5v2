@@ -17,4 +17,7 @@ public class UserService {
 
         System.out.println("User [" + userId + "] info saved");
     }
+    public String getUser(){
+        return "User";
+    }
 }
