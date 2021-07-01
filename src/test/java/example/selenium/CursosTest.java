@@ -40,7 +40,7 @@ public class CursosTest {
     driver.quit();
   }
   @Test
-  public void cursos() {
+  public void cursos() throws InterruptedException {
     // Test name: Cursos
     // Step # | name | target | value
     // 1 | open | / | 
