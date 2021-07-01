@@ -12,4 +12,8 @@ public class Calculadora {
         float bf= (float) b;
         return (af / bf);
     }
+
+    public static int resta(int a, int b) {
+        return a-b;
+    }
 }
