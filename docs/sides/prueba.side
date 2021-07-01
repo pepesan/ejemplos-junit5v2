@@ -1,0 +1,95 @@
+{
+  "id": "794874ef-2eed-4d6f-a6f5-705f5d3dd82f",
+  "version": "2.0",
+  "name": "prueba",
+  "url": "https://cursosdedesarrollo.com",
+  "tests": [{
+    "id": "6c8551ff-6ec6-4749-bd6a-60542d8088ec",
+    "name": "Pagina Profesores",
+    "commands": [{
+      "id": "5bc32016-2e06-472a-bfbc-f2754568d11b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c0cad85-314e-4159-abcf-ea9965f4f3b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-menu-item-766 .g-menu-item-title",
+      "targets": [
+        ["css=.g-menu-item-766 .g-menu-item-title", "css:finder"],
+        ["xpath=//div[@id='menu-4858-particle']/nav/ul/li[3]/a/span/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b051d37-8307-4e09-a831-7b1b7f72ae5d",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Profesores – Cursos de Desarrollo",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b28bc175-76b4-41d4-bead-db6dbd3cfc3c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.entry-title",
+      "targets": [
+        ["css=.entry-title", "css:finder"],
+        ["xpath=//article[@id='post-763']/section/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Profesores')]", "xpath:innerText"]
+      ],
+      "value": "Profesores"
+    }]
+  }, {
+    "id": "2f1cb73a-4d81-4e91-91f5-07f52ae7b5ca",
+    "name": "Cursos",
+    "commands": [{
+      "id": "678b90b4-3dec-47f2-8f69-05457fcbc2d7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0dda88e-83c1-43fc-ae5a-79ff5c88bee0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-menu-item-2313 .g-menu-item-title",
+      "targets": [
+        ["css=.g-menu-item-2313 .g-menu-item-title", "css:finder"],
+        ["xpath=//div[@id='menu-4858-particle']/nav/ul/li[5]/a/span/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfe6644d-b305-4ac5-b7b5-87b71ea2901b",
+      "comment": "",
+      "command": "assertElementPresent",
+          "target": "linkText=Magento",
+      "targets": [
+        ["linkText=Magento", "linkText"],
+        ["css=li:nth-child(1) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Magento')]", "xpath:link"],
+        ["xpath=//article[@id='post-618']/section[2]/ul/li/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://cursosdedesarrollo.com/curso-de-magento-1-9/']", "xpath:href"],
+        ["xpath=//li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Magento')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c321fb4c-9ea7-41df-b141-6f2f7c079b46",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6c8551ff-6ec6-4749-bd6a-60542d8088ec"]
+  }],
+  "urls": ["https://cursosdedesarrollo.com/"],
+  "plugins": []
+}
