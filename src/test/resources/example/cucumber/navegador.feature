@@ -5,3 +5,4 @@ Feature: Prueba de Navegación
   Scenario: La pagina de profesores en correcta
     When Voy a la pagina de profesores mediante el menu
     Then Deberia aparecer el con el titulo magento
+    And Cierro el navegador

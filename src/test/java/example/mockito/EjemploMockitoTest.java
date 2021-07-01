@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
 public class EjemploMockitoTest {
     @Mock
-    private UserService service;
+    public UserService service;
 
     private UserService service2;
 

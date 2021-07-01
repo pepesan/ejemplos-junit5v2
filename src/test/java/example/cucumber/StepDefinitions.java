@@ -26,8 +26,8 @@ public class StepDefinitions {
         assertEquals( c,this.c);
     }
 
-    @When("ejecuto el método resta con el parametros {int} y {int}")
-    public void ejecutoElMétodoRestoConElParametrosY(int a, int b) {
+    @When("ejecuto el metodo resta con el parametros {int} y {int}")
+    public void ejecutoElMetodoRestoConElParametrosY(int a, int b) {
         this.c=Calculadora.resta(a,b);
     }
 }

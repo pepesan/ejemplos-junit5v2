@@ -1,5 +1,6 @@
 package example.cucumber;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -41,5 +42,10 @@ public class StepNavegacion {
             List<WebElement> elements = driver.findElements(By.linkText("Magento"));
             assert(elements.size() > 0);
         }
+    }
+
+    @And("Cierro el navegador")
+    public void cierroElNavegador() {
+        driver.quit();
     }
 }
