@@ -7,6 +7,6 @@ import org.junit.platform.suite.api.SuiteDisplayName;
 import org.junit.runner.RunWith;
 @RunWith(JUnitPlatform.class)
 @SuiteDisplayName("JUnit Platform Suite Demo")
-@SelectPackages("example.asserts")
+@SelectPackages("example.meta")
 class JUnitPlatformSuiteDemo {
 }

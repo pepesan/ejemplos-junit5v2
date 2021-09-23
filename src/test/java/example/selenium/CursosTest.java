@@ -30,7 +30,7 @@ public class CursosTest {
   JavascriptExecutor js;
   @BeforeEach
   public void setUp() {
-    System.setProperty("webdriver.chrome.driver", "C:\\Users\\pepesan\\Downloads\\chromedriver_win32\\chromedriver.exe");
+    //System.setProperty("webdriver.chrome.driver", "C:\\Users\\pepesan\\Downloads\\chromedriver_win32\\chromedriver.exe");
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
