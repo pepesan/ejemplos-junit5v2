@@ -20,4 +20,7 @@ public class Cliente implements Serializable {
         this.email = "";
         this.fechaNacimiento = null;
     }
+    public String getNombreCompleto(){
+        return nombre + " " + apellido;
+    }
 }

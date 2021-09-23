@@ -22,4 +22,11 @@ public class ClienteTest {
         assertEquals("", c.getEmail());
         assertNull(c.getFechaNacimiento());
     }
+
+    @Test
+    public void getNombreCompletoCorrecto(){
+        c.setNombre("Pepe");
+        c.setApellido("Sanchez");
+        assertEquals("Pepe Sanchez", c.getNombreCompleto());
+    }
 }
