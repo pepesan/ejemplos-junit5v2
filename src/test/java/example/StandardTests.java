@@ -41,8 +41,8 @@ class StandardTests {
 
     @Test
     void abortedTest() {
-        assumeTrue("abc".contains("Z"));
-        fail("test should have been aborted");
+        assumeTrue("abc".contains("a"));
+        //fail("test should have been aborted");
     }
 
     @AfterEach

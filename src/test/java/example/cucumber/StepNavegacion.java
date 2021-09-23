@@ -19,7 +19,7 @@ public class StepNavegacion {
 
     @Given("Abro el navegador en la pagina web principal")
     public void abroElNavegadorEnLaPaginaWebPrincipal() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\pepesan\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\pepesan\\Downloads\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
