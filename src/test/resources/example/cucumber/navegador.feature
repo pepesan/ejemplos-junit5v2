@@ -1,3 +1,4 @@
+@web
 Feature: Prueba de Navegación
   Prueba de uso de Webdriver para navegare sobre un sitio web
   Background:

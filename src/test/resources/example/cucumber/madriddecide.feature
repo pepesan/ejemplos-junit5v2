@@ -1,3 +1,4 @@
+@web
 Feature: Prueba de Madrid decide
   Prueba de uso de Webdriver para navegare sobre Madrid Decide
   Background:

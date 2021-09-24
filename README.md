@@ -16,4 +16,5 @@ mvn test -Dgroups="!api"
 
 ## Cucumber
 mvn -Dtest=example.cucumber.RunCucumberTest test
+mvn -Dtest=example.cucumber.RunCucumberCalculadoraTest test -Dcucumber.filter.tags="@calculadora"
 
