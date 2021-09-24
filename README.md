@@ -3,7 +3,12 @@
 ## lanzamiento mvn test
 mvn test
 mvn -Dtest=example.SimpleTest test
-
+### ejecución de tag integracion
+mvn test -Dgroups="integracion"
+### ejecución de tag varios tag
+mvn test -Dgroups="integracion | aceptacion"
+## no ejecutes este tag api
+mvn test -Dgroups="!api"
 ## Web Driver
 * Para usar el chrome webdriver debes descargarlo desde https://chromedriver.chromium.org/downloads
 * En linux dale permisos de ejecución con: chmod +x chromedriver
@@ -11,3 +16,4 @@ mvn -Dtest=example.SimpleTest test
 
 ## Cucumber
 mvn -Dtest=example.cucumber.RunCucumberTest test
+

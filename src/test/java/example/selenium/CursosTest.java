@@ -6,6 +6,7 @@ import static org.hamcrest.core.IsNot.not;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,6 +41,7 @@ public class CursosTest {
     driver.quit();
   }
   @Test
+  @Tag("aceptacion")
   public void cursos() throws InterruptedException {
     // Test name: Cursos
     // Step # | name | target | value

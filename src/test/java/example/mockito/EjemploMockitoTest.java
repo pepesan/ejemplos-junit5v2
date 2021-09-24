@@ -1,6 +1,7 @@
 package example.mockito;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -26,16 +27,19 @@ public class EjemploMockitoTest {
     }
 
     @Test
+    @Tag("integracion")
     public void testAutowiredValueField() {
         service.saveUser("1000");
         verify(service, times(1)).saveUser("1000");
     }
     @Test
+    @Tag("integracion")
     public void testAutowiredValueField2() {
         service2.saveUser("1000");
         verify(service2, times(1)).saveUser("1000");
     }
     @Test
+    @Tag("integracion")
     public void testAutowiredValueField3() {
         UserService userService = new UserService();
         UserService spiedService = spy(userService);

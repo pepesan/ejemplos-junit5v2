@@ -2,6 +2,7 @@ package example.asserts;
 
 import example.Calculator;
 import example.Person;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CountDownLatch;
@@ -17,6 +18,7 @@ public class TestAsserts {
     private final Person person = new Person("Jane", "Doe");
 
     @Test
+    @Tag("assert")
     void standardAssertions() {
         assertEquals(2, calculator.add(1, 1));
         assertEquals(4, calculator.multiply(2, 2),
