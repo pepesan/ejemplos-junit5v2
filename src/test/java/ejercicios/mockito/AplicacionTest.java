@@ -3,6 +3,7 @@ package ejercicios.mockito;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -15,13 +16,12 @@ public class AplicacionTest {
     }
     @Test
     public void checkConstructor(){
-        assertNotNull(app.controlador);
+        assertNotNull(app.getControlador());
     }
     @Test
-    public void checkControlador(){
-        Controlador controladorMockeado = spy(app.controlador);
-        app.controlador=controladorMockeado;
-        app.main();
-        verify(controladorMockeado).list();
+    public void testSetControlador(){
+        Controlador controlador = new Controlador();
+        app.setControlador(controlador);
+        assertEquals(controlador, app.getControlador());
     }
 }

@@ -17,7 +17,7 @@ public class ControladorModeloIntegrationTest {
     @Before
     public void setup() {
         c = new Controlador();
-        modeloMockeado = spy(c.getModelo());
+        modeloMockeado = spy(new Modelo());
         c.setModelo(modeloMockeado);
     }
     @Test
