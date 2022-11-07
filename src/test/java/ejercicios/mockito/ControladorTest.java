@@ -17,7 +17,7 @@ public class ControladorTest {
         c = new Controlador();
     }
     @Test
-    public void checkContructor(){
+    public void testContructor(){
         assertNotNull(c.getModelo());
         assertNotNull(c.getDatosProcesados());
         assertEquals(0,c.getDatosProcesados().size());

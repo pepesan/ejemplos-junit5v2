@@ -15,7 +15,7 @@ public class AplicacionTest {
         app = new Aplicacion();
     }
     @Test
-    public void checkConstructor(){
+    public void testConstructor(){
         assertNotNull(app.getControlador());
     }
     @Test

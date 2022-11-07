@@ -1,5 +1,6 @@
 package ejercicios.mockito;
 
+import io.cucumber.java.en.Then;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,19 +21,31 @@ public class ControladorModeloIntegrationTest {
         modeloMockeado = spy(new Modelo());
         c.setModelo(modeloMockeado);
     }
+    /*
+        Método que comprueba si el método list del modelo
+        es llamado cuando se llama al método list del controlador
+     */
     @Test
-    public void checkModel(){
+    public void testModel(){
+        // When
+        // llamo al método que debería llamar al método del modelo
         c.list();
+        // Then
+        // assert de que se ha llamado al método list del modelo mockeado
         verify(modeloMockeado).list();
     }
     @Test
     public void checkModelProcessing(){
+        // Disponer de unos datos iniciales
         List<String> listadoEsperado = new ArrayList<String>();
         listadoEsperado.add("Uno");
         listadoEsperado.add("Dos");
         listadoEsperado.add("Tres");
+        // pedirle al objeto mockeado que deveulva esos datos
         when(modeloMockeado.list()).thenReturn(listadoEsperado);
+        // llamar al método que pide esos datos
         c.list();
+        // comprobar que los procesa adecuadamente
         assertEquals("Uno1",c.getDatosProcesados().get(0));
         assertEquals("Dos1",c.getDatosProcesados().get(1));
         assertEquals("Tres1",c.getDatosProcesados().get(2));
