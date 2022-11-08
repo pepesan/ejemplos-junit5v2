@@ -41,7 +41,7 @@ public class ControladorModeloIntegrationTest {
         listadoEsperado.add("Uno");
         listadoEsperado.add("Dos");
         listadoEsperado.add("Tres");
-        // pedirle al objeto mockeado que deveulva esos datos
+        // pedirle al objeto mockeado que devuelva esos datos
         when(modeloMockeado.list()).thenReturn(listadoEsperado);
         // llamar al método que pide esos datos
         c.list();
