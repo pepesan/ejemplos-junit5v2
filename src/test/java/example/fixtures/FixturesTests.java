@@ -1,4 +1,4 @@
-package example;
+package example.fixtures;
 
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
@@ -10,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-class StandardTests {
+class FixturesTests {
 
     @BeforeAll
     static void initAll() {
@@ -24,6 +24,7 @@ class StandardTests {
 
     @Test
     void succeedingTest() {
+        System.out.println("Prueba1");
     }
     /*
     @Test
@@ -39,11 +40,15 @@ class StandardTests {
         // not executed
     }
 
+    /*
     @Test
     void abortedTest() {
+        System.out.println("Prueba2");
         assumeTrue("abc".contains("a"));
         //fail("test should have been aborted");
     }
+
+     */
 
     @AfterEach
     void tearDown() {

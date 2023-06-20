@@ -4,7 +4,7 @@ import org.junit.jupiter.api.RepeatedTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RepeatedTests {
+class RepeatedTests {
     @RepeatedTest(10)
     void repeatedTest() {
         int resultado = 2;
