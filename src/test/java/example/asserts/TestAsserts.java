@@ -77,8 +77,9 @@ public class TestAsserts {
     @Test
     void timeoutNotExceeded() {
         // The following assertion succeeds.
-        assertTimeout(ofMinutes(2), () -> {
-            // Perform task that takes less than 2 minutes.
+        assertTimeout(ofMillis(100), () -> {
+            // Aquí si colocamos 100ms excede el límite de tiempo y falla
+            Thread.sleep(1000);
         });
     }
 
