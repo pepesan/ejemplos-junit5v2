@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @Suite
 @SuiteDisplayName("JUnit Platform Suite Demo")
 @SelectPackages("example")
-@IncludeClassNamePatterns(".*Test")
+// @IncludeClassNamePatterns(".*Test")
 @IncludeTags("integracion")
 public class IntegracionTest {
 }
