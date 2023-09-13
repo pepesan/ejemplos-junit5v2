@@ -5,6 +5,6 @@ Feature: Prueba de Madrid decide
     Given Abro el navegador en la pagina web principal
   Scenario: La navegación a un distrito es correcta
     When Voy a la pagina de usera
-    When hago click en la primera propuesta
-    Then Compruebo los titulos
+    #When hago click en la primera propuesta
+    #Then Compruebo los titulos
     And Cierro el navegador

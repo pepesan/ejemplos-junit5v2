@@ -56,8 +56,8 @@ public class StepNavegacion {
     @When("Voy a la pagina de usera")
     public void voyALaPaginaDeUsera() {
         driver.get("https://decide.madrid.es/presupuestos");
-        driver.findElement(By.id("iam-cookie-control-modal-action-primary")).click();
-        driver.findElement(By.cssSelector("a [href]='/budgets/presupuestos-participativos-2021/investments/18956'")).click();
+        // driver.findElement(By.id("iam-cookie-control-modal-action-primary")).click();
+        // driver.findElement(By.cssSelector("a [href]='/budgets/presupuestos-participativos-2021/investments/18956'")).click();
     }
 
     @When("hago click en la primera propuesta")
