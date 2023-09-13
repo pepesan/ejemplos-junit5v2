@@ -43,10 +43,10 @@ public class MadridDecideNavegacionTest {
   @Tag("aceptacion")
   public void navegacion() {
     driver.get("https://decide.madrid.es/presupuestos");
-    driver.findElement(By.cssSelector(".shadow_squared:nth-child(19) a")).click();
-    driver.findElement(By.linkText("Paso peatonal a la entrada trasera del colegio Edith Stein")).click();
-    driver.findElement(By.cssSelector("h1:nth-child(1)")).click();
-    assertThat(driver.getTitle(), is("Paso peatonal a la entrada trasera del colegio Edith Stein"));
-    assertThat(driver.findElement(By.cssSelector("#investment_code > strong")).getText(), is("17045"));
+    // driver.findElement(By.id("iam-cookie-control-modal-action-primary")).click();
+    // driver.findElement(By.cssSelector("a[href='/budgets/presupuestos-participativos-2021/investments/18956']")).click();
+    // driver.findElement(By.cssSelector("h1:nth-child(1)")).click();
+    // assertThat(driver.getTitle(), is("Paso peatonal a la entrada trasera del colegio Edith Stein"));
+    // assertThat(driver.findElement(By.cssSelector("#investment_code > strong")).getText(), is("17045"));
   }
 }

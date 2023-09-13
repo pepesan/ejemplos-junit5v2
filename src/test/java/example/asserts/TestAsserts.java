@@ -79,7 +79,7 @@ public class TestAsserts {
         // The following assertion succeeds.
         assertTimeout(ofMillis(100), () -> {
             // Aquí si colocamos 100ms excede el límite de tiempo y falla
-            Thread.sleep(1000);
+            Thread.sleep(50);
         });
     }
 
