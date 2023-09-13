@@ -32,8 +32,14 @@ public class TestAsserts {
         // In a grouped assertion all assertions are executed, and all
         // failures will be reported together.
         assertAll("person",
-                () -> assertEquals("Jane", person.getFirstName()),
-                () -> assertEquals("Doe", person.getLastName())
+                () -> {
+                    System.out.println("prueba1");
+                    assertEquals("Jane", person.getFirstName());
+                },
+                () -> {
+                    System.out.println("prueba2");
+                    assertEquals("Doe", person.getLastName());
+                }
         );
     }
 

@@ -1,4 +1,4 @@
-package example.meta;
+package example.tags;
 
 import org.junit.jupiter.api.Tag;
 
@@ -10,6 +10,6 @@ import java.lang.annotation.Target;
 @Target({ ElementType.TYPE,
         ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
-@Tag("fast")
-public @interface Fast {
+@Tag("smoke")
+public @interface Smoke {
 }

@@ -1,4 +1,4 @@
-package example.meta;
+package example.tags;
 
 import example.Calculator;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MiTest {
     @Fast
+    @Smoke
     @ParameterizedTest(name = "{0} + {1} = {2}")
     @CsvSource({
             "0, 1, 1",
