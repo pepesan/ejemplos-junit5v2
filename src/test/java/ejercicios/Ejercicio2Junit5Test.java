@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.ArrayList;
@@ -125,14 +126,15 @@ public class Ejercicio2Junit5Test {
         return 42;
     }
 
-    @RepeatedTest(3) // Esta prueba se ejecutará 3 veces.
-    public void testRepeatedOperation() {
-        int result = MathUtil.square(2);
-        assertEquals(4, result);
+    @ParameterizedTest
+    @CsvSource({"2, 4", "3, 9", "4, 16"}) // Esta prueba se ejecutará 3 veces.
+    public void testRepeatedOperation(int input, int expected) {
+        int result = MathUtil.square(input);
+        assertEquals(expected, result);
     }
 
     @ParameterizedTest
-    @CsvSource({"2, 4", "3, 9", "4, 16"})
+    @CsvFileSource(resources = "/datos-cuadrado.csv", numLinesToSkip = 1)
     public void testSquare(int input, int expected) {
         int result = MathUtil.square(input);
         assertEquals(expected, result);
