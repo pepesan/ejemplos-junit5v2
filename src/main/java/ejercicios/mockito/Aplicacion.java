@@ -1,11 +1,14 @@
 package ejercicios.mockito;
 
+import org.checkerframework.checker.units.qual.A;
+import org.checkerframework.checker.units.qual.C;
+
 public class Aplicacion {
     private static Controlador controlador;
-    public Aplicacion(){
-        controlador = new Controlador();
-    }
 
+    Aplicacion(){
+        this.setControlador(new Controlador());
+    }
     public void setControlador(Controlador controlador){
         this.controlador = controlador;
     }
@@ -13,8 +16,8 @@ public class Aplicacion {
         return this.controlador;
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         Aplicacion aplicacion = new Aplicacion();
-        aplicacion.getControlador().list();
+        aplicacion.controlador.list();
     }
 }
