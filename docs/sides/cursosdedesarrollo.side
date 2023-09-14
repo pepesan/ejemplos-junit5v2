@@ -1,0 +1,54 @@
+{
+  "id": "1f749f7d-cc6d-42aa-b62e-e1592f5a4825",
+  "version": "2.0",
+  "name": "cursosdedesarrollo",
+  "url": "https://cursosdedesarrollo.com",
+  "tests": [{
+    "id": "6627111b-9165-4648-9e69-2473f34e9b50",
+    "name": "navegacion-cursos",
+    "commands": [{
+      "id": "8ca74326-cd95-4293-9039-be7d3fb656fc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d21ff3a0-6cd1-433f-a104-6c7bc8928938",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cursos Gratuitos",
+      "targets": [
+        ["linkText=Cursos Gratuitos", "linkText"],
+        ["css=.active > .g-menu-item-container", "css:finder"],
+        ["xpath=//div[@id='menu-9726-particle']/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://cursosdedesarrollo.com/cursos/')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cursos Gratuitos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f971b1f-4d08-44c0-a7d7-c48258d5b1ca",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.entry-title",
+      "targets": [
+        ["css=.entry-title", "css:finder"],
+        ["xpath=//article[@id='post-618']/section/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Cursos Gratuitos')]", "xpath:innerText"]
+      ],
+      "value": "Cursos Gratuitos"
+    }]
+  }],
+  "suites": [{
+    "id": "df6b22c4-b9e9-446a-9992-4dcff2df1bb4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6627111b-9165-4648-9e69-2473f34e9b50"]
+  }],
+  "urls": ["https://cursosdedesarrollo.com/"],
+  "plugins": []
+}
