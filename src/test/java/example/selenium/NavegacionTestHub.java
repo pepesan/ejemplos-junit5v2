@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
@@ -32,9 +33,10 @@ public class NavegacionTestHub {
   JavascriptExecutor js;
   @BeforeEach
   public void setUp() throws MalformedURLException {
+    FirefoxOptions firefoxOptions = new FirefoxOptions();
     driver = new RemoteWebDriver(
             new URL("http://localhost:4444/wd/hub"),
-            DesiredCapabilities.firefox());
+            firefoxOptions);
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }

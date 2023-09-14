@@ -5,6 +5,7 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -18,15 +19,16 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 
-public class LoginfalidoGridTest {
+public class LoginfallidoGridTest {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
   @BeforeEach
   public void setUp() throws MalformedURLException {
+    FirefoxOptions firefoxOptions = new FirefoxOptions();
     driver = new RemoteWebDriver(
             new URL("http://localhost:4444/wd/hub"),
-            DesiredCapabilities.firefox());
+            firefoxOptions);
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
     driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
