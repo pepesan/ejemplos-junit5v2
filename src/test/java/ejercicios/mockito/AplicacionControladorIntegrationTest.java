@@ -1,14 +1,14 @@
 package ejercicios.mockito;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
 public class AplicacionControladorIntegrationTest {
     private Aplicacion app;
-    @Before
+    @BeforeEach
     public void setup(){
         app = new Aplicacion();
     }
@@ -20,7 +20,7 @@ public class AplicacionControladorIntegrationTest {
         // asigno el objeto al objeto de la aplicación
         app.setControlador(controladorMockeado);
         // llamo al método que debería llamar al list de controlador
-        app.main();
+        Aplicacion.main();
         // verifico que se ha llamado al método list del controlador
         verify(controladorMockeado).list();
     }

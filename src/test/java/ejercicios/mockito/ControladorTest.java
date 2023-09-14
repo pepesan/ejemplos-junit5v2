@@ -1,7 +1,7 @@
 package ejercicios.mockito;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import static org.junit.Assert.assertNotNull;
 public class ControladorTest {
     private Controlador c;
 
-    @Before
+    @BeforeEach
     public void setup() {
         c = new Controlador();
     }

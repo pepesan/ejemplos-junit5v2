@@ -1,6 +1,6 @@
 package ejercicios.mockito;
 
-import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
@@ -21,6 +21,6 @@ public class ProcesadorProcesoIntegrationTest {
         when(proceso.getNombre()).thenReturn(nombre);
         procesador.llamaProceso();
         verify(proceso).getNombre();
-        Assertions.assertEquals("nombre_proceso -i", procesador.getComando());
+        assertEquals("nombre_proceso -i", procesador.getComando());
     }
 }

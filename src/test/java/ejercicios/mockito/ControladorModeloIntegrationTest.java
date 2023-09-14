@@ -1,8 +1,9 @@
 package ejercicios.mockito;
 
 import io.cucumber.java.en.Then;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ import static org.mockito.Mockito.spy;
 public class ControladorModeloIntegrationTest {
     private Controlador c;
     private Modelo modeloMockeado;
-    @Before
+    @BeforeEach
     public void setup() {
         c = new Controlador();
         modeloMockeado = spy(new Modelo());

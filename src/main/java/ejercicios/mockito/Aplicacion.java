@@ -1,7 +1,7 @@
 package ejercicios.mockito;
 
 public class Aplicacion {
-    private Controlador controlador;
+    private static Controlador controlador;
     public Aplicacion(){
         controlador = new Controlador();
     }
@@ -12,7 +12,9 @@ public class Aplicacion {
     public Controlador getControlador(){
         return this.controlador;
     }
-    public void main() {
-        controlador.list();
+
+    public static void main() {
+        Aplicacion aplicacion = new Aplicacion();
+        aplicacion.getControlador().list();
     }
 }
