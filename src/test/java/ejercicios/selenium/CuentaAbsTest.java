@@ -29,7 +29,7 @@ public class CuentaAbsTest {
     driver.quit();
   }
   @Test
-  public void cuentaabs() {
+  public void cuentaAbs() {
     // Test name: cuenta-abs
     // Step # | name | target | value
     // 1 | open | https://cursosdedesarrollo.com/pactometro/ | 

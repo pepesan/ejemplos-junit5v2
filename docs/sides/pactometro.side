@@ -375,6 +375,70 @@
       ],
       "value": "36"
     }]
+  }, {
+    "id": "91f3bc72-11d0-4896-b852-0c17c60cad87",
+    "name": "oculta",
+    "commands": [{
+      "id": "b493bf28-afff-48d7-bbe9-46a11e4a4027",
+      "comment": "",
+      "command": "open",
+      "target": "https://cursosdedesarrollo.com/pactometro/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39f621d0-7f62-489f-9c4c-e7954a3b8c73",
+      "comment": "",
+      "command": "click",
+      "target": "id=part-PP",
+      "targets": [
+        ["id=part-PP", "id"],
+        ["css=#part-PP", "css:finder"],
+        ["xpath=//button[@id='part-PP']", "xpath:attributes"],
+        ["xpath=//div[@id='partidos']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'137')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6d6c792-4a42-4a9b-a5e0-d1c5f3d3023c",
+      "comment": "",
+      "command": "click",
+      "target": "id=num-sies",
+      "targets": [
+        ["id=num-sies", "id"],
+        ["css=#num-sies", "css:finder"],
+        ["xpath=//h2[@id='num-sies']", "xpath:attributes"],
+        ["xpath=//div[@id='sies']/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37c6ac82-8581-4070-a02f-9a6d89c4e3f0",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=num-sies",
+      "targets": [
+        ["id=num-sies", "id"],
+        ["css=#num-sies", "css:finder"],
+        ["xpath=//h2[@id='num-sies']", "xpath:attributes"],
+        ["xpath=//div[@id='sies']/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'137')]", "xpath:innerText"]
+      ],
+      "value": "137"
+    }, {
+      "id": "2b1586e9-aed0-4235-8000-6312bf1e8976",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#sies img",
+      "targets": [
+        ["css=img:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='sies']/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "da4af080-dc26-4d45-a3ee-2ebc768e5f2e",

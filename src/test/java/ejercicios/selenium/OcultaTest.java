@@ -60,7 +60,7 @@ public class OcultaTest {
       List<WebElement> elements = driver.findElements(By.cssSelector("#sies img"));
       assert(elements.size() > 0);
       String disabledValue = botonPP.getAttribute("disabled");
-      System.out.println("Disabled: "+ disabledValue);
+      /// System.out.println("Disabled: "+ disabledValue);
       assertEquals(disabledValue, "true");
     }
   }
