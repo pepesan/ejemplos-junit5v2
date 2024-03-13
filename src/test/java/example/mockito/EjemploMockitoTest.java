@@ -31,12 +31,18 @@ public class EjemploMockitoTest {
     public void testAutowiredValueField() {
         service.saveUser("1000");
         verify(service, times(1)).saveUser("1000");
+        when(service.getUser()).thenReturn("Mi Usuario");
+        String ret = service.getUser();
+        assertEquals("Mi Usuario", ret);
     }
     @Test
     @Tag("integracion")
     public void testAutowiredValueField2() {
         service2.saveUser("1000");
         verify(service2, times(1)).saveUser("1000");
+        when(service2.getUser()).thenReturn("Mi Usuario");
+        String ret = service2.getUser();
+        assertEquals("Mi Usuario", ret);
     }
     @Test
     @Tag("integracion")

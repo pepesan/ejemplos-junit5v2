@@ -17,7 +17,7 @@ public class ProcesadorProcesoIntegrationTest {
         procesador.setProceso(proceso);
         */
         String nombre = "nombre_proceso";
-        // pedirle al objeto mockeado que deveulva esos datos
+        // pedirle al objeto mockeado que devuelva esos datos
         when(proceso.getNombre()).thenReturn(nombre);
         procesador.llamaProceso();
         verify(proceso).getNombre();

@@ -1,17 +1,17 @@
 package ejercicios;
 
 import example.Calculator;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalculatorTest {
+public class CalculatorFixturesTest extends CalculatorBaseTest{
+
     @Test
     @DisplayName("checking add")
     public void testOnePlusOneEqualsTwo(){
-        // GIVEN
-        Calculator c= new Calculator();
         // WHEN
         int resultado  = c.add(1,1);
         // THEN
@@ -20,8 +20,6 @@ public class CalculatorTest {
     @Test
     @DisplayName("checking subsctract")
     public void testOneMinusOneEqualsZero(){
-        // GIVEN
-        Calculator c= new Calculator();
         // WHEN
         int resultado  = c.subtract(1,1);
         // THEN
@@ -31,8 +29,6 @@ public class CalculatorTest {
     @Test
     @DisplayName("checking multiply")
     public void testOneMultiplyOneEqualsOne(){
-        // GIVEN
-        Calculator c= new Calculator();
         // WHEN
         int resultado  = c.multiply(1,1);
         // THEN
@@ -41,8 +37,6 @@ public class CalculatorTest {
     @Test
     @DisplayName("checking divide")
     public void testOneDivideOneEqualsOne(){
-        // GIVEN
-        Calculator c= new Calculator();
         // WHEN
         int resultado  = c.divide(1,1);
         // THEN
@@ -51,8 +45,6 @@ public class CalculatorTest {
     @Test
     @DisplayName("checking default memory")
     public void testDefaultMemory(){
-        // GIVEN
-        Calculator c= new Calculator();
         // WHEN
         int resultado  = c.getMemory();
         // THEN
@@ -62,8 +54,6 @@ public class CalculatorTest {
     @Test
     @DisplayName("checking inc memory")
     public void testIncMemory(){
-        // GIVEN
-        Calculator c= new Calculator();
         // WHEN
         c.inc(1);
         // THEN
