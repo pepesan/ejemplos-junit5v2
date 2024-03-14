@@ -15,7 +15,7 @@ public class StepDefinitions {
         calculadora= new Calculadora();
         this.c=0;
     }
-    @When("^ejecuto el método suma con el parametros (\\d+) y (\\d+)$")
+    @When(value = "^ejecuto el método suma con el parametros (\\d+) y (\\d+)$")
     public void ejecuto_el_metodo_suma_con_parametros(int a, int b) throws Throwable {
         this.c=Calculadora.suma(a,b);
     }
