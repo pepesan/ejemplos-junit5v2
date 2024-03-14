@@ -1,6 +1,5 @@
 package ejercicios.mockito;
 
-import io.cucumber.java.en.Then;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

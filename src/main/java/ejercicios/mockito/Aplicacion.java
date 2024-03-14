@@ -18,6 +18,9 @@ public class Aplicacion {
 
     public static void main(String[] args) {
         Aplicacion aplicacion = new Aplicacion();
-        aplicacion.controlador.list();
+        aplicacion.list();
+    }
+    public void list(){
+        this.controlador.list();
     }
 }
