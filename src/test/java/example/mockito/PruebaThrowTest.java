@@ -2,10 +2,18 @@ package example.mockito;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
 public class PruebaThrowTest {
+    @Test
+    void givenNonVoidReturnType_whenUsingWhenThen_thenReturnString() {
+        MyDictionary dictMock = mock(MyDictionary.class);
+        when(dictMock.getMeaning(anyString())).thenReturn("Hola");
+        String ret= dictMock.getMeaning("Adios");
+        assertEquals(ret,"Hola", "Debería devolver Hola");
+    }
     @Test
     void givenNonVoidReturnType_whenUsingWhenThen_thenExceptionIsThrown() {
         MyDictionary dictMock = mock(MyDictionary.class);

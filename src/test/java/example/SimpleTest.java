@@ -2,9 +2,11 @@ package example;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.suite.api.SuiteDisplayName;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SuiteDisplayName("Simple test")
 public class  SimpleTest {
     @Test
     @DisplayName("1 + 1 = 2")

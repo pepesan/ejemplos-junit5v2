@@ -8,7 +8,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import static org.mockito.Mockito.*;
 
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 
@@ -30,7 +29,9 @@ public class EjemploMockitoTest {
     @Tag("integracion")
     public void testAutowiredValueField() {
         service.saveUser("1000");
+        // Comprobando si ha sido llamado el método saveUser con el parámetro "1000"
         verify(service, times(1)).saveUser("1000");
+        // cuando se llame al método getUser sin parámetro devuelve "Mi usuario"
         when(service.getUser()).thenReturn("Mi Usuario");
         String ret = service.getUser();
         assertEquals("Mi Usuario", ret);
