@@ -11,15 +11,23 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.mock;
 
 public class ControladorModeloIntegrationTest {
     private Controlador c;
     private Modelo modeloMockeado;
     @BeforeEach
     public void setup() {
-        c = new Controlador();
+        // GIVEN
         modeloMockeado = spy(new Modelo());
+        modeloMockeado = mock(Modelo.class);
+        // inicializo el objeto que quiero probar
+        c = new Controlador();
+        // meto el objeto mockeado
         c.setModelo(modeloMockeado);
+        // o bien meto directamente en el controlador el objeto mockeado
+        c = new Controlador(modeloMockeado);
+        // finalmente en la propiedad modelo del controlador tengo el modelo mockeado/espiado
     }
     /*
         Método que comprueba si el método list del modelo

@@ -9,6 +9,9 @@ public class Aplicacion {
     Aplicacion(){
         this.setControlador(new Controlador());
     }
+    Aplicacion(Controlador controlador){
+        this.setControlador(controlador);
+    }
     public void setControlador(Controlador controlador){
         this.controlador = controlador;
     }

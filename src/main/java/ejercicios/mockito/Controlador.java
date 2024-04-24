@@ -11,6 +11,10 @@ public class Controlador {
         modelo = new Modelo();
         datosProcesados = new ArrayList<String>();
     }
+    public Controlador(Modelo modelo){
+        this.modelo = modelo;
+        datosProcesados = new ArrayList<String>();
+    }
     public void list(){
         datosProcesados = modelo.list();
         processData();

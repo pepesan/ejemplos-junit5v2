@@ -11,12 +11,17 @@ import static org.mockito.Mockito.*;
 
 public class ApplicationControladorIntegrationTest {
     private Controlador controladorMockeado;
+    private Controlador controladorEspiado;
     private Aplicacion aplicacion;
     @BeforeEach
     public void setup() {
-        aplicacion = new Aplicacion();
-        controladorMockeado = spy(new Controlador());
-        aplicacion.setControlador(controladorMockeado);
+        // Given
+//        aplicacion = new Aplicacion();
+        controladorEspiado = spy(new Controlador());
+
+//        aplicacion.setControlador(controladorMockeado);
+        controladorMockeado = mock(Controlador.class);
+        aplicacion=new Aplicacion(controladorMockeado);
     }
     /*
         Método que comprueba si el método list del modelo
